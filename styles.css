@@ -1,0 +1,27 @@
+:root {
+    --color-accent: #5eead4;
+    --color-highlight: #e2e8f0;
+}
+
+* {
+    font-family: "inter", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 1rem;
+}
+
+header h1,
+header h4,
+.lightText {
+    color: var(--color-highlight);
+}
+
+header a {
+    text-decoration: none;
+}
