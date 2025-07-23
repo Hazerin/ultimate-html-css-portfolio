@@ -13,7 +13,34 @@
 body {
     background: #0f172a;
     color: #94a3b8;
-    padding: 1rem;
+    padding: 4rem 2rem;
+    display: grid;
+    /* Una colonna, dimensione minima 0, massima 1frazione (ogni colonna occupa una frazione dello spazio disponibile,
+    distribuiti equamente visto che è una frazione per elemento)*/
+    grid-template-columns: repeat(1), minmax(0, 1fr);
+    gap: 8rem;
+}
+
+.underlay {
+    position: fixed;
+    /*inset definisce a quanta distanza dai 4 bordi inizia l'elemento */
+    inset: 0;
+    background: #172554;
+    opacity: 0.25;
+}
+
+header,
+main,
+footer {
+    position: relative;
+    z-index: 10;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 300px;
 }
 
 header h1,
@@ -24,4 +51,24 @@ header h4,
 
 header a {
     text-decoration: none;
+}
+
+header h1 {
+    font-weight: 600;
+}
+
+header h4 {
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
